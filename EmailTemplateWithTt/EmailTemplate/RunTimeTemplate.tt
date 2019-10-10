@@ -1,0 +1,33 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace=" EmailTemplateWithTt.ModelDto" #>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+    <title>Page-b944b354-4648-4ab8-a182-c2146bb030d1</title>
+</head> 
+<body> 
+    <p>Merhaba, </p>
+    <p>Bugünkü rapor bilgileri aşağıdaki gibidir.: </p>
+       <p>Özet Üretim Bilgileri </p>
+    <table border="1px" cellpadding="5" cellspacing="0" style="border: solid 1px black; font-size: xsmall;">
+	   <tr bgcolor="#E6E6FA" align="left" valign="top">
+           <td nowrap style="border: solid 1px black;" align="left" valign="top" width="105">Test1</td>
+            <td nowrap style="border: solid 1px black;" align="left" valign="top" width="105">Test2</td>
+          
+        </tr>
+<#				foreach(TestDto e in Items){#>		
+		<tr align="left" valign="top">
+            <td nowrap align="left" valign="top" style="border: 1px solid black; border-image: none;" bgcolor="#f8f8ff"><#=e.Name #></td>
+            <td nowrap align=" left" valign="top" style="border: 1px solid black; border-image: none;" bgcolor="#f8f8ff"><#=e.City??"" #></td>
+        </tr>
+<#				}#>
+
+<p></p>
+</body>
+</html>
